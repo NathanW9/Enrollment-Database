@@ -1,1 +1,7 @@
-Semesters Table
+--Semesters Table
+create table semesters(
+    id int,
+    year year,
+    type varchar(10),
+    primary key(id)
+)
