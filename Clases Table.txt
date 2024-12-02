@@ -1,6 +1,6 @@
 Classes Table 
 
-Create Table Class (
+Create Table Classes (
     id int Primary Key,
     name varchar,
     couseCode int(5),
