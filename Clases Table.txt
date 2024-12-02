@@ -4,7 +4,7 @@ Create Table Class (
     id int Primary Key,
     name varchar,
     couseCode int(5),
-    sectionNumber int,
-    classIndex int);
+    sectionNumber int
+)
 
 
