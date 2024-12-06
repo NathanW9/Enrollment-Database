@@ -1,7 +1,6 @@
 --Semesters Table
 create table semesters(
-    id int,
+    Sid int Primary Key,
     year year,
-    type varchar(10),
-    primary key(id)
+    semester ENUM('Fall', 'Spring') NOT NULL
 )

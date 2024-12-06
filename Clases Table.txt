@@ -1,10 +1,10 @@
 Classes Table 
 
 Create Table Classes (
-    id int Primary Key,
+    Cid int Primary Key,
     name varchar,
-    couseCode int(5),
-    sectionNumber int
+    subject varchar(4),
+    couseCode int(3)
 )
 
 

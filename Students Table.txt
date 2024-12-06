@@ -1,11 +1,7 @@
 --Students Table
 create table students (
-    id int, 
+    StuID int Primary Key, 
     firstName text,
     lastName text,
-    studentId int,
-    currClassIndex int,
-    nextClassIndex int,
-    primary key (id),
-    foreign key (currClassIndex, nextClassIndex) references classes(id)
+    studentId int
 )
