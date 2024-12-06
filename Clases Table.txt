@@ -7,4 +7,20 @@ Create Table Classes (
     couseCode int(3)
 )
 
-
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (0, 'Discrete Structures for Computer Science', 'COMP',  115 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (1, 'Principles of Computing Science I', 'COMP',  171 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (2, 'Principles of Computer Science II', 'COMP',  172 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (3, 'Introduction to Computer Organization and Systems', 'COMP',  210 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (4, 'Introduction to Data Structures', 'COMP',  220 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (5, 'Algorithms and Data Structures', 'COMP',  311 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (6, 'Introduction to Software Engineering', 'COMP',  345 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (7, 'Elective', 'COMP', 1);
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (8, 'Elective', 'COMP', 2);
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (9, 'Elective', 'COMP', 3);
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (10, 'Elective', 'COMP', 4);
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (11, 'Calculus I', 'MATH',  111 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (12, 'Introduction to Applied Linear Algebra', 'MATH',  187 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (13, 'Linear Algebra', 'MATH',  231 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (14, 'Stats for BEM', 'MATH',  144 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (15, 'Stats for HLSS', 'MATH',  145 );
+INSERT INTO Classes (Cid, name, subject, courseCode) VALUES (16, 'Statistical Analysis', 'MATH',  216 );

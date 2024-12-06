@@ -3,5 +3,10 @@ create table students (
     StuID int Primary Key, 
     firstName text,
     lastName text,
-    studentId int
+    studentId int(9)
 )
+
+INSERT INTO students (StuID, firstName, lastName, studentId) VALUES
+(1, 'John', 'Doe', 123456789),
+(2, 'Jane', 'Smith', 987654321),
+(3, 'Alice', 'Johnson', 123123123);
