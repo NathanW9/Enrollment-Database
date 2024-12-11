@@ -65,3 +65,18 @@ create table classesBeingTaken (
     FOREIGN KEY (Cid) REFERENCES classes(Cid),
     FOREIGN KEY (Sid) REFERENCES semesters(Sid)
 )
+
+-- Advisor table
+create table advisors (
+	aid int,
+	name text,
+)
+
+-- prerequisites table
+-- course is a prereq for other course
+create table prerequisites (
+	precid int,
+	cid int,
+	foreign key (precid) references classes(Cid),
+	foreign key (cid) references classes(Cid)
+)
