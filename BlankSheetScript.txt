@@ -1,0 +1,47 @@
+BlankSheetScript
+
+function copyPasteSheetS() {
+  const startSemester = "Fall 2020";
+  var sourceSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
+  var destinationSheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+  if (!sourceSheet) {
+    throw new Error("Source sheet not found");
+  }
+
+  if (typeof startSemester !== 'string' || !startSemester.match(/(Fall|Spring) \d{4}/)) {
+    throw new Error('Invalid startSemester format. Expected format: "Fall 2020"');
+  }
+
+  const [semester, yearStr] = startSemester.split(" ");
+  const num = parseInt(yearStr, 10);
+  const year = Number(num.toFixed());
+
+  if (isNaN(year)) {
+    throw new Error("Invalid year");
+  }
+
+  var sourceRange = sourceSheet.getRange('A1:P100');
+  sourceRange.copyTo(destinationSheet.getRange('A1'), { contentsOnly: true });
+  var semesterValues = [year + 0.5, year + 1, year + 1.5, year + 2, year + 2.5, year + 3, year + 3.5, year + 4];
+
+  for (var i = 0; i < semesterValues.length; i++) {
+    const header = `>ConvertYearToSemester(semesterValues[i])`;
+    destinationSheet.getRange(1, 2 + i, 1).setValue(header);
+  }
+
+  return `Data copied and headers updated starting from ${startSemester}`;
+}
+
+function convertYearToSemester(yearFloat) {
+  const year = Math.floor(yearFloat);
+  const decimal = yearFloat - year;
+
+  if (decimal === 0) {
+    return `Spring ${year}`;
+  } else if (decimal === 0.5) {
+    return `Fall ${year}`;
+  } else {
+    throw new Error("Invalid year format");
+  }
+}
